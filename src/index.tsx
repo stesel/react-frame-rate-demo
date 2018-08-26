@@ -37,7 +37,7 @@ class Circle extends React.PureComponent<CircleProps> {
             strokeWidth="1"
             stroke="red"
           />
-          <text x="0" y="15" fill="black">{`FPS: ${
+          <text x="70" y="50" fill="black">{`FPS: ${
             this.props.frameRate
           }`}</text>
         </svg>
