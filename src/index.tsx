@@ -65,19 +65,43 @@ const options = {
   updateState
 };
 
-const WithAnimation60fps = withReactFrameRate<CircleProps>(options)(Circle);
+const WithAnimation60fps = withReactFrameRate<CircleProps>(options)((props) => (
+    <div style={{display: "flex"}}>
+        <Circle {...props} />
+        <Circle {...props} />
+        <Circle {...props} />
+    </div>
+));
 const WithAnimation30fps = withReactFrameRate<CircleProps>({
   ...options,
   frameRate: 30
-})(Circle);
+})((props) => (
+    <div style={{display: "flex"}}>
+        <Circle {...props} />
+        <Circle {...props} />
+        <Circle {...props} />
+    </div>
+));
 const WithAnimation15fps = withReactFrameRate<CircleProps>({
   ...options,
   frameRate: 15
-})(Circle);
+})((props) => (
+    <div style={{display: "flex"}}>
+        <Circle {...props} />
+        <Circle {...props} />
+        <Circle {...props} />
+    </div>
+));
 const WithAnimation5fps = withReactFrameRate<CircleProps>({
   ...options,
   frameRate: 5
-})(Circle);
+})((props) => (
+    <div style={{display: "flex"}}>
+        <Circle {...props} />
+        <Circle {...props} />
+        <Circle {...props} />
+    </div>
+));
 
 const App = () => (
   <div>
